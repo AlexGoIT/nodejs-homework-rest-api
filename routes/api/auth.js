@@ -13,6 +13,16 @@ router.post(
   ctrl.register
 );
 
+// Verify email
+router.get("/verify/:verificationToken", ctrl.verifyEmail);
+
+// Resend verify email
+router.post(
+  "/verify",
+  validateBody(userSchemas.emailSchema),
+  ctrl.resendVerifyEmail
+);
+
 // Sign In
 router.post("/login", validateBody(userSchemas.loginSchema), ctrl.login);
 
