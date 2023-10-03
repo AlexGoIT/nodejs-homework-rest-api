@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 // Error: self-signed certificate in certificate chain
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 //
 
 const { META_USER, META_PASSWORD } = process.env;
